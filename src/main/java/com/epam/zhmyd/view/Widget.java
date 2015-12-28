@@ -6,7 +6,14 @@ import java.io.File;
  * Created by Aliaksandr_Zhmaidzia on 12/21/2015.
  */
 public class Widget {
-    public void draw(String string, View view) {
+
+    private View view;
+
+    public Widget(View view) {
+        this.view = view;
+    }
+
+    public void draw(String string) {
         File parent = new File(string);
         StringBuilder builder = new StringBuilder();
         builder.append("<html lang=\"en\">\n<head>\n</head>\n<body>");

@@ -15,8 +15,8 @@ public class Application {
             Modes mode = Modes.valueOf(args[1]);
             View view = getView(mode);
 
-            Widget widget = new Widget();
-            widget.draw(path, view);
+            Widget widget = new Widget(view);
+            widget.draw(path);
         }
     }
 
